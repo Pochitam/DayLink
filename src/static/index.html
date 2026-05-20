@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daylink</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="dl-root">
+
+    <div class="dl-header">
+      <div class="dl-logo">day<span>link</span></div>
+      <div class="dl-stats">
+        <div class="dl-stat active" id="stat-active">0 активных</div>
+        <div class="dl-stat done" id="stat-done">0 выполнено</div>
+      </div>
+    </div>
+
+    <div class="dl-form-card">
+      <div class="dl-form-row full">
+        <input class="dl-input" id="f-title" placeholder="Название задачи..." />
+      </div>
+      <div class="dl-form-row full">
+        <input class="dl-input" id="f-desc" placeholder="Описание (необязательно)" />
+      </div>
+      <div class="dl-form-row">
+        <input class="dl-input" type="datetime-local" id="f-deadline" />
+        <select class="dl-select" id="f-cat">
+          <option value="study">Учёба</option>
+          <option value="work">Работа</option>
+          <option value="personal">Личное</option>
+        </select>
+      </div>
+      <div class="dl-form-row">
+        <select class="dl-select" id="f-prio">
+          <option value="high">Высокий приоритет</option>
+          <option value="medium" selected>Средний приоритет</option>
+          <option value="low">Низкий приоритет</option>
+        </select>
+        <button class="dl-btn-add" onclick="addTask()">+ Добавить задачу</button>
+      </div>
+    </div>
+
+    <div class="dl-filters">
+      <button class="dl-filter active" onclick="setFilter('all', this)">Все</button>
+      <button class="dl-filter" onclick="setFilter('active', this)">Активные</button>
+      <button class="dl-filter" onclick="setFilter('done', this)">Выполненные</button>
+      <button class="dl-filter" onclick="setFilter('overdue', this)">Просроченные</button>
+      <select class="dl-sort" id="sort-select" onchange="renderTasks()">
+        <option value="created">По дате создания</option>
+        <option value="deadline">По дедлайну</option>
+        <option value="priority">По приоритету</option>
+      </select>
+    </div>
+
+    <div class="dl-section-label" id="section-label">задачи</div>
+    <div id="tasks-container"></div>
+
+  </div>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>
