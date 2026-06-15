@@ -13,6 +13,7 @@ app.mount("/static", StaticFiles(directory="src/static"), name="static")
 
 app.include_router(tasks.router)
 
+
 @app.get("/")
 def read_root():
     return FileResponse("src/static/index.html")
