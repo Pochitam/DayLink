@@ -5,3 +5,6 @@ pydantic
 python-dotenv
 flake8
 black
+pytest
+httpx2
+pytest-asyncio
