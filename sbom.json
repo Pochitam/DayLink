@@ -1,0 +1,224 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:99262e7a-6907-4af8-b531-a2ee463b1092",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-06-15T18:26:02+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.52.2"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "e4580de4-2419-4cc6-bafc-3ce004864cea",
+      "type": "application",
+      "name": ".",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "615e067b-ce0e-4574-a750-d01c566f1700",
+      "type": "application",
+      "name": "requirements.txt",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/black@26.3.1",
+      "type": "library",
+      "name": "black",
+      "version": "26.3.1",
+      "purl": "pkg:pypi/black@26.3.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/fastapi@0.115.0",
+      "type": "library",
+      "name": "fastapi",
+      "version": "0.115.0",
+      "purl": "pkg:pypi/fastapi@0.115.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/flake8@7.1.1",
+      "type": "library",
+      "name": "flake8",
+      "version": "7.1.1",
+      "purl": "pkg:pypi/flake8@7.1.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/httpx@0.27.2",
+      "type": "library",
+      "name": "httpx",
+      "version": "0.27.2",
+      "purl": "pkg:pypi/httpx@0.27.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/pydantic@2.9.0",
+      "type": "library",
+      "name": "pydantic",
+      "version": "2.9.0",
+      "purl": "pkg:pypi/pydantic@2.9.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/pytest@9.0.3",
+      "type": "library",
+      "name": "pytest",
+      "version": "9.0.3",
+      "purl": "pkg:pypi/pytest@9.0.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/python-dotenv@1.2.2",
+      "type": "library",
+      "name": "python-dotenv",
+      "version": "1.2.2",
+      "purl": "pkg:pypi/python-dotenv@1.2.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/sqlalchemy@2.0.36",
+      "type": "library",
+      "name": "sqlalchemy",
+      "version": "2.0.36",
+      "purl": "pkg:pypi/sqlalchemy@2.0.36",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/uvicorn@0.30.0",
+      "type": "library",
+      "name": "uvicorn",
+      "version": "0.30.0",
+      "purl": "pkg:pypi/uvicorn@0.30.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "615e067b-ce0e-4574-a750-d01c566f1700",
+      "dependsOn": [
+        "pkg:pypi/black@26.3.1",
+        "pkg:pypi/fastapi@0.115.0",
+        "pkg:pypi/flake8@7.1.1",
+        "pkg:pypi/httpx@0.27.2",
+        "pkg:pypi/pydantic@2.9.0",
+        "pkg:pypi/pytest@9.0.3",
+        "pkg:pypi/python-dotenv@1.2.2",
+        "pkg:pypi/sqlalchemy@2.0.36",
+        "pkg:pypi/uvicorn@0.30.0"
+      ]
+    },
+    {
+      "ref": "e4580de4-2419-4cc6-bafc-3ce004864cea",
+      "dependsOn": [
+        "615e067b-ce0e-4574-a750-d01c566f1700"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/black@26.3.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/fastapi@0.115.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/flake8@7.1.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/httpx@0.27.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pydantic@2.9.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pytest@9.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/python-dotenv@1.2.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/sqlalchemy@2.0.36",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/uvicorn@0.30.0",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": []
+}
