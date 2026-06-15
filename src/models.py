@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Boolean, DateTime
 from .database import Base
-from datetime import datetime
+from datetime import datetime, UTC
 
 
 class Task(Base):
@@ -13,4 +13,4 @@ class Task(Base):
     category = Column(String, default="personal")
     priority = Column(String, default="medium")
     is_done = Column(Boolean, default=False)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=lambda: datetime.now(UTC))

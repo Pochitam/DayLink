@@ -25,10 +25,13 @@ jobs:
         run: uv pip install --system -r requirements.txt
 
       - name: Install linters
-        run: uv pip install --system flake8 black
+        run: uv pip install --system flake8 black pytest httpx
 
       - name: Run flake8
         run: flake8 src --max-line-length=100
 
       - name: Run black check
         run: black --check src
+
+      - name: Run tests
+        run: pytest tests/ -v
