@@ -3,7 +3,6 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from .database import engine, Base
 from .routers import tasks
-import os
 
 Base.metadata.create_all(bind=engine)
 
